@@ -1,0 +1,11 @@
+--- libMachShims/config.yaml.orig	2013-09-21 12:50:19.000000000 +0200
++++ libMachShims/config.yaml	2013-11-08 21:56:03.656476886 +0100
+@@ -7,7 +7,7 @@
+         cflags: '-Iinclude -D_GNU_SOURCE=1'
+         ldadd: '-lrt'
+         sources: [ ]
+-        headers: [ 'mach/mach.h', 'mach/message.h', 'mach/port.h', 'mach/std_types.h' ]
++        headers: [ 'include/mach/clock_types.h', 'include/mach/error.h', 'include/mach/mach.h', 'include/mach/mach_error.h', 'include/mach/mach_time.h', 'include/mach/message.h', 'include/mach/port.h', 'include/mach/std_types.h' ]
+ install:
+     - install -d -m 755 -o foo -g bar $pkgincludedir
+     - install -m 0644 mach $pkgincludedir
