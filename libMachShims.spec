@@ -3,13 +3,16 @@ Summary(pl.UTF-8):	Przejściówki do typów danych i funkcji systemu Mach
 Name:		libMachShims
 Version:	0
 %define	subver	svn20
-Release:	0.%{subver}.1
+Release:	0.%{subver}.2
 License:	Apache v2.0
 Group:		Libraries
 # svn co svn://mark.heily.com/libMachShims
 Source0:	%{name}.tar.xz
 # Source0-md5:	37e5d017c28e0487d24462c73550f351
 Patch0:		%{name}-headers.patch
+Patch1:		build-source-list.patch
+Patch2:		time-header-compat.patch
+Patch3:		use-env-cflags.patch
 URL:		http://mark.heily.com/
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -46,6 +49,9 @@ Statyczna biblioteka libMachShims.
 %prep
 %setup -q -n %{name}
 %patch -P0 -p1
+%patch -P1 -p1
+%patch -P2 -p1
+%patch -P3 -p1
 
 %build
 # NOTE: not autoconf configure

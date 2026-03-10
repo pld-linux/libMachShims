@@ -1,0 +1,5 @@
+--- libMachShims/config.yaml.orig	2013-09-21 12:50:19.000000000 +0200
++++ libMachShims/config.yaml	2026-03-10 10:00:00.000000000 +0100
+@@ -9 +9 @@
+-        sources: [ ]
++        sources: [ 'src/error.c' ]

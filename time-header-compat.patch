@@ -1,0 +1,12 @@
+--- libMachShims/src/error.c.orig	2013-09-21 12:50:19.000000000 +0200
++++ libMachShims/src/error.c	2026-03-10 10:00:00.000000000 +0100
+@@ -19,7 +19,8 @@
+  * @APPLE_APACHE_LICENSE_HEADER_END@
+  */
+ 
+-#include <mach/mach_time.h>
++#include <stdint.h>
++#include <time.h>
+ 
+ uint64_t
+ mach_absolute_time(void)
